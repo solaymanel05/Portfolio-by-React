@@ -1,0 +1,202 @@
+/*
+  ==================================================
+     Table of contents
+  ==================================================
+*/
+
+/* ======================================= 
+1 - Header design
+2 - button & icons
+3 - Model == Prop up
+4 - responsible design media query
+==========================================
+ */
+
+/* ============================
+ 1 - Hearder design 
+ ==============================
+ */
+header ul.flex {
+  gap: 16px;
+}
+header ul li a {
+  color: var(--title-nav);
+  opacity: 0.9;
+  font-weight: 400;
+  text-transform: capitalize;
+  transition: all 0.5s ease-in-out;
+}
+header ul li a:hover {
+  color: var(--subtitleMain);
+  opacity: 1;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+header button {
+  font-size: 1.2rem;
+}
+header.flex {
+  justify-content: space-around;
+  padding-top: 1rem;
+}
+
+header.flex nav {
+  background-color: var(--primary);
+  padding: 0.77rem 1.6rem;
+  border-radius: 55px;
+  /* border:1px solid var(--subtitleMain); */
+}
+.light header.flex nav {
+  background-color: var(--cardColor);
+  padding: 0.77rem 1.6rem;
+  border-radius: 55px;
+  border: 1px solid var(--subtitleMain);
+}
+/* =================================
+ 2 - icons and buttons
+====================================
+*/
+header .button {
+  width: 2.4rem;
+  height: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid var(--subtitle);
+  cursor: pointer;
+  transition: all 0.7s ease-in-out;
+}
+.light header .button {
+  width: 2.4rem;
+  height: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid var(--cardColor);
+  cursor: pointer;
+  transition: all 0.7s ease-in-out;
+}
+header .button:hover {
+  border: 1px solid var(--blue);
+}
+.light header .button:hover {
+  border: 1px solid rgb(252, 251, 251);
+}
+.icon-menu {
+  color: var(--icon-bar);
+}
+.icon-menu:active {
+  cursor: pointer;
+  color: var(--icon-bar);
+}
+.icon-moon {
+  color: var(--icon-moon);
+}
+.icon-moon:active {
+  cursor: pointer;
+  scale: 0.85;
+}
+
+header .button-menu {
+  display: none;
+}
+
+/* ================================
+ 3 - Model == Prop up
+===================================
+*/
+
+header .fixed {
+  position: fixed;
+  /*top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;*/
+  /* filter: blur(8px); this is blur anything also text */
+  backdrop-filter: blur(8px);
+  inset: 0;
+  z-index: 100;
+  background: rgba(
+    7,
+    6,
+    6,
+    0.5
+  ); /* A semi-transparent overlay to give a hazy effect */
+  backdrop-filter: blur(2px); /* A blur filter to simulate fog */
+  animation: flow 10s linear infinite; /* Smooth, continuous animation */
+}
+@keyframes flow {
+  0% {
+    background-position: 0% 0%; /* Start of the animation */
+  }
+  100% {
+    background-position: 100% 0%; /* End of the animation */
+  }
+}
+header .fixed ul.model {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  background: #0c1f09; /* A semi-transparent overlay to give a hazy effect */
+  backdrop-filter: blur(2px); /* A blur filter to simulate fog */
+  animation: anime 0.7s linear;
+}
+@keyframes anime {
+  0% {
+    transform: scale(0);
+  }
+  60% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+header .fixed ul.model li {
+  border-bottom: 1px solid var(--border);
+  padding-top: 0.5rem;
+  padding-bottom: 0.77rem;
+}
+header .fixed ul.model li:last-child {
+  border: none;
+}
+
+header .fixed ul.model li:first-child {
+  text-align: right;
+  border: none;
+  padding-top: 0.2rem;
+  padding-bottom: 0;
+}
+.iconXmark {
+  font-size: 1.2rem;
+  color: var(--title);
+  transition: all 0.7s ease-in-out;
+}
+.iconXmark:hover {
+  font-size: 1.4em;
+  color: var(--title);
+  transform: rotate(360deg);
+  color: brown;
+}
+.sunIcon {
+  color: rgba(255, 166, 0, 0.489);
+}
+
+/* =================================
+ 4 - responsible design media query
+====================================
+*/
+@media (max-width: 700px) {
+  header.flex nav {
+    display: none;
+  }
+  header .button-menu {
+    display: block;
+  }
+}

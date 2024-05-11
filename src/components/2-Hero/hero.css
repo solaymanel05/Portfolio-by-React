@@ -1,0 +1,135 @@
+/*
+  ==================================================
+     Table of contents
+  ==================================================
+*/
+
+/* ======================================= 
+1 - Left section 
+2 - Right section
+
+==========================================
+ */
+
+/*
+  ==================================================
+  1-   Parent section
+  ==================================================
+*/
+section.hero {
+  margin-top: 3rem;
+}
+
+/*
+  ==================================================
+  2-  Left Section 
+  ==================================================
+*/
+section.hero .left-section {
+  flex-grow: 1;
+}
+/*
+  ==================================================
+  3-  parent avatar has img and icon verfié
+  ==================================================
+*/
+section.hero .parent-avatar.flex {
+  align-items: end;
+  margin-bottom: 5px;
+  gap: 2px;
+}
+.parent-avatar .avatarImg {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 1px solid var(--subtitleMain);
+  box-shadow: 0 0 6px var(--subtitleMain);
+}
+.parent-avatar .IconVerify {
+  font-size: 1.1rem;
+  color: var(--blue);
+}
+/*
+  ==================================================
+  4-  Title subtitle
+  ==================================================
+*/
+section.hero h1.title {
+  font-size: 2.5rem;
+  margin: 30px 0;
+  color: var(--title);
+}
+section.hero p.subtitle {
+  font-size: 0.9rem;
+  color: var(--subtitle);
+  line-height: 1.4rem;
+  margin-bottom: 22px;
+}
+
+/*
+  ==================================================
+  5-  Icons social
+  ==================================================
+*/
+section.hero .icons {
+  gap: 24px;
+  font-size: 22px;
+  color: var(--subtitle);
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+section.hero .icons .icon:hover {
+  color: var(--title);
+  transform: scale(1.1);
+  transition: all 0.5s ease-in-out;
+}
+a {
+  opacity: 0.7;
+  color: #fff;
+  transition: all 0.4s ease-in-out;
+}
+a:hover {
+  color: #fff;
+  opacity: 1;
+}
+.light a {
+  opacity: 0.8;
+  color: #000000;
+  transition: all 0.4s ease-in-out;
+}
+.light a:hover {
+  color: #000000;
+  opacity: 1;
+}
+
+/* 
+  ==================================================
+     Right Section ===> Animation img
+  ================================================== 
+  */
+
+.lotieSearch {
+  width: 300px;
+}
+/* 
+  ==================================================
+     Media query Hero section
+  ================================================== 
+  */
+
+@media (max-width: 700px) {
+  section.hero h1.title {
+    font-size: 2rem;
+    margin: 30px 0;
+    color: var(--title);
+  }
+  .parent-avatar .avatarImg {
+    width: 120px;
+    height: 120px;
+    
+  }
+  .animation {
+    display: none;
+  }
+
+}
